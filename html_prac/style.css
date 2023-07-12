@@ -1,0 +1,26 @@
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16vh; /* Use viewport height for full-page height */
+    font-family: 'Courier New', monospace;
+    color: #000000; /* Set a text color */
+    font-weight:bolder;
+  }
+  
+  .center-content section {
+    padding: 30px; /* Add padding to the section */
+    text-align: center; /* Center-align the section content */
+  }
+  
+  .center-content h2 {
+    font-size: 30px; /* Adjust the heading font size */
+    color: #333; /* Set a heading color */
+  }
+  
+  .center-content p {
+    font-size: 16px; /* Adjust the paragraph font size */
+    line-height: 1.5; /* Add some line height for readability */
+    margin-bottom: 20px; /* Add a bottom margin for spacing */
+  }
+  

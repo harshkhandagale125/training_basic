@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 20px;
+        margin-left: 0px;
+      }
+    </style>
+ </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="pop_up.html">
+            <img
+              src="icon.jpg"
+              class="icon-image"
+              alt="loading"
+              width="170px"
+              height="80px"
+              style="mix-blend-mode: multiply"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link "
+                  aria-current="page"
+                  href="./pop_up.html"
+                  style="padding: 10px 15px"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="padding: 10px 15px">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="padding: 10px 15px"
+                  >Content</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="padding: 10px 15px">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Vertical navbar -->
+    <h3 class="text-center" style="text-align: center;">PYTHON</h3>
+    <div class="container">
+      <div>
+        <ul class="nav flex-column bg-white mb-0">
+          <li class="nav-item">
+            <a
+              href="#home"
+              class="nav-link text-dark font-italic bg-light"
+              onclick="loadContent('home')"
+            >
+              <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="#introduction"
+              class="nav-link text-dark font-italic"
+              onclick="loadContent('introduction')"
+            >
+              <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+              Introduction
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="#getting-started"
+              class="nav-link text-dark font-italic"
+              onclick="loadContent('getting-started')"
+            >
+              <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+              Getting Started
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="#syntax"
+              class="nav-link text-dark font-italic"
+              onclick="loadContent('syntax')"
+            >
+              <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+              Syntax
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <!-- Page content holder -->
+        <div class="page-content p-5" id="content"></div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      function loadContent(page) {
+        const contentDiv = document.getElementById('content');
+        contentDiv.innerHTML = '';
+
+        // Simulate loading content from server (replace with your own logic)
+        let contentText = '';
+        switch (page) {
+          case 'home':
+            contentText = '<h1>Welcome to Python Home Page</h1><p>This is the home page content.</p><br><p>Python is a dynamic, interpreted (bytecode-compiled) language. There are no type declarations of variables, parameters, functions, or methods in source code. This makes the code short and flexible, and you lose the compile-time type checking of the source code.</p>';
+            break;      
+            case 'introduction':
+  contentText = `
+    <h1>Introduction to Python</h1>
+    <p>Python is a high-level, interpreted programming language known for its simplicity and readability. It was created by Guido van Rossum and first released in 1991. Python's design philosophy emphasizes code readability, with a clear and expressive syntax that allows developers to write clean and concise code.</p>
+    <p>Python is widely used in various domains, including web development, data analysis, scientific computing, artificial intelligence, machine learning, and more. It has a large and active community of developers who contribute to its growth and ecosystem.</p>
+    <h2>Key Features of Python:</h2>
+    <ul>
+      <li><strong>Simple and Readable:</strong> Python's syntax is designed to be intuitive and easy to understand, making it suitable for beginners and experienced developers alike.</li>
+      <li><strong>Expressive:</strong> Python allows developers to express concepts and ideas in fewer lines of code compared to other programming languages.</li>
+      <li><strong>Interpreted:</strong> Python is an interpreted language, which means that it does not require compilation. This allows for rapid development and prototyping.</li>
+      <li><strong>Dynamic Typing:</strong> Python is dynamically typed, meaning that variable types are determined automatically based on the assigned values.</li>
+      <li><strong>Large Standard Library:</strong> Python comes with a comprehensive standard library, providing pre-built modules and functions for a wide range of tasks.</li>
+      <li><strong>Third-Party Libraries:</strong> Python has a vast ecosystem of third-party libraries and frameworks that extend its capabilities for specific purposes.</li>
+      <li><strong>Platform Independent:</strong> Python is available on various platforms, including Windows, macOS, and Linux, making it highly portable.</li>
+    </ul>
+    <p>Python's versatility, simplicity, and powerful features have contributed to its popularity among developers. Whether you're a beginner or an experienced programmer, Python offers a range of possibilities for building applications and solving complex problems.</p>
+  `;
+  break;
+
+           
+            case 'syntax':
+  contentText = `
+    <h1>Python Syntax</h1>
+    <p>Python has a clean and straightforward syntax that makes it easy to read and write. Here are some key syntax elements in Python:</p>
+    <ul>
+      <li><strong>Indentation:</strong> Python uses indentation (whitespace at the beginning of a line) to indicate blocks of code. This makes the code structure more readable and eliminates the need for curly braces or explicit block delimiters.</li>
+      <li><strong>Variables:</strong> Variables in Python are dynamically typed, meaning you don't need to declare the variable type explicitly. Just assign a value, and Python will determine the appropriate type.</li>
+      <li><strong>Data Types:</strong> Python supports various data types, including numeric types (int, float), boolean, strings, lists, tuples, dictionaries, and more.</li>
+      <li><strong>Conditional Statements:</strong> Python provides conditional statements like if, elif, and else to control the flow of the program based on conditions.</li>
+      <li><strong>Loops:</strong> Loops, such as for and while, allow you to iterate over a sequence of elements or repeat a block of code until a certain condition is met.</li>
+      <li><strong>Functions:</strong> Functions in Python allow you to define reusable blocks of code that can be called with different arguments. They can also return values if needed.</li>
+      <li><strong>Modules:</strong> Python has a rich standard library and a vast ecosystem of third-party modules. You can import modules to access pre-built functions and classes to extend Python's capabilities.</li>
+      <li><strong>Exception Handling:</strong> Python provides try-except blocks to handle exceptions and gracefully manage errors that may occur during program execution.</li>
+    </ul>
+    <p>Python's syntax emphasizes readability and simplicity, making it a popular choice for beginners and experienced developers alike. By understanding these syntax elements, you can start writing Python code and build a wide range of applications.</p>
+  `;
+  break;
+
+
+          default:
+            contentText = '<h1>Page Not Found</h1><p>The requested page was not found.</p>';
+        }
+
+        contentDiv.innerHTML = contentText;
+      }
+
+      // Load initial content
+      loadContent('home');
+    </script>
+  </body>
+</html>

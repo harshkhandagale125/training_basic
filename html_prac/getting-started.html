@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Java</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      ol {
+        margin-bottom: 20px;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Getting Started with Java</h1>
+      <h2>Installation</h2>
+      <p>
+        To get started with Java, you need to install the Java Development Kit (JDK) on your computer. Follow these steps to install JDK:
+      </p>
+      <ol>
+        <li>Visit the Oracle website (https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).</li>
+        <li>Download the JDK installer for your operating system.</li>
+        <li>Run the installer and follow the on-screen instructions.</li>
+        <li>Set up the environment variables (JAVA_HOME and PATH) to point to the JDK installation directory.</li>
+      </ol>
+      <h2>Writing Your First Java Program</h2>
+      <p>
+        Once you have installed JDK, you can write and run your first Java program. Follow these steps to write a simple "Hello, World!" program:
+      </p>
+      <ol>
+        <li>Create a new text file and save it with a .java extension (e.g., HelloWorld.java).</li>
+        <li>Open the file in a text editor and add the following code:
+          <pre><code>public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello, World!");
+  }
+}</code></pre>
+        </li>
+        <li>Save the file.</li>
+        <li>Open a command prompt or terminal and navigate to the directory where you saved the file.</li>
+        <li>Compile the Java source file by running the following command:
+          <pre><code>javac HelloWorld.java</code></pre>
+        </li>
+        <li>Run the compiled program using the following command:
+          <pre><code>java HelloWorld</code></pre>
+        </li>
+        <li>You should see the output "Hello, World!" displayed in the console.</li>
+      </ol>
+      <p>
+        Congratulations! You have successfully written and executed your first Java program.
+      </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

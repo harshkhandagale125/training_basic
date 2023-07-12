@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax of Java</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+
+      pre {
+        background-color: #f8f9fa;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      code {
+        font-family: Consolas, monospace;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Syntax of Java</h1>
+      <h2>Variables and Data Types</h2>
+      <p>
+        In Java, variables are used to store data. Here's an example of declaring variables and assigning values to them:
+      </p>
+      <pre><code>int age = 25;
+double salary = 50000.50;
+String name = "John Doe";
+boolean isEmployed = true;</code></pre>
+      <p>
+        In the example above, we declared variables of different data types: <code>int</code> for integers, <code>double</code> for floating-point numbers, <code>String</code> for text, and <code>boolean</code> for true/false values.
+      </p>
+      <h2>Control Flow Statements</h2>
+      <p>
+        Java provides several control flow statements to control the flow of execution in a program. Here are some examples:
+      </p>
+      <pre><code>if (condition) {
+  // code to execute if the condition is true
+} else {
+  // code to execute if the condition is false
+}
+
+for (int i = 0; i &lt; 5; i++) {
+  // code to repeat 5 times
+}
+
+while (condition) {
+  // code to execute repeatedly while the condition is true
+}
+
+switch (variable) {
+  case value1:
+    // code to execute if the variable matches value1
+    break;
+  case value2:
+    // code to execute if the variable matches value2
+    break;
+  default:
+    // code to execute if the variable doesn't match any case
+}</code></pre>
+      <p>
+        The <code>if</code> statement is used for conditional execution, the <code>for</code> loop is used for iteration, the <code>while</code> loop is used for repeated execution, and the <code>switch</code> statement is used for multi-way branching.
+      </p>
+      <h2>Methods</h2>
+      <p>
+        In Java, methods are used to encapsulate a block of code that performs a specific task. Here's an example of a method declaration:
+      </p>
+      <pre><code>public int calculateSum(int a, int b) {
+  int sum = a + b;
+  return sum;
+}</code></pre>
+      <p>
+        In the example above, we declared a method named <code>calculateSum</code> that takes two integer parameters <code>a</code> and <code>b</code> and returns the sum of the two numbers.
+      </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
