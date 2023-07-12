@@ -1,0 +1,86 @@
+*********PROJECT PERSPECTIVE ********************************
+- Document-oriented data model
+- CRUD operations
+- Indexing and aggregation
+- Schema design and data modeling
+- Replication and sharding
+- Aggregation pipelines and operators
+- Geospatial queries and indexing
+- Replica sets and failover mechanisms
+- Backup and restore strategies in MongoDB
+- MongoDB Atlas and cloud-based deployments
+
+*************************************************************
+info in json form 
+api documentation is mandatory 
+
+
+npm run dev    for running separate files
+
+1)Mongo db comes under Nosql i.e Non-relational, document oriented database
+2)Mongo uses BSON it is binary JSON and parsing is fast,stores data (js object notation)
+3)here columns is called field, rows are called documents and table is called collection
+4)use harshdatabase - creates new database, but there you must put some data
+5)db.harshdata.insertOne({"data you want to put"})
+6)cls - to clear the cmd screen
+7)show dbs  - to show all your databases
+8)show collections  - rows
+9)db.harshdata.find()  - to view your data 
+10) db.harshdata.find().pretty() shows code in a good manner
+11) db  - to see the current database
+        CRUD:- create, read, update, delete
+12)db.harshdata.insertMany([{}, {},{},{}...])
+13)read snytax:- db.collection.find(query, projection)
+ here projection is that you can put specific i.e you will only get that name 
+eg:- db.harshdata.find({name:"Mongo DB"}, {name:1})
+will give only name:Mongo DB and if you put name:0 will get all data except MongoDB
+14)db.harshdata.find({active:true}).limit(1)   will give only the first document.
+db.harshdata.find({active:true}).limit(1).skip(1)  will skip the first value having active:true and will show the second value
+15)updateOne():- db.COLLECTION_NAME.updateOne(
+{filter
+},{update>})
+here filter means what you want to change or update  
+db.COLLECTION_NAME.updateMany({filter},{update})
+eg:-db.harshdata.updateOne({name:"hemant"},{$set:{type:"male"}})  $set is imp to use
+16) deleteMany():- db.COLLECTION_NAME.deleteMany(DELETION_CRITERIA)
+17)              STARING IN VS CODE
+18) npm i mongoose
+19) npm init -y
+20) **********************Starting Mongo in vs code***********************************
+first require(mongoose)
+then connnect to mongoose
+then create a Schema i.e a struture
+then create a modle for it which includes (Collection_name, schemaName)
+then start making documents for eg:-
+        const reactPlaylist = new Playlist({
+            name: "Node js",
+            type: "Backend",
+            active: true,
+            vedios: 30
+        })
+
+21)update syntax:
+collection_name.updateOne(filter, update, options)
+22)enum:["frontend", "backend","database"]  //means user can only put following
+23) Validator is very imp
+first instal npm i validator 
+then const validator = require(validator)
+eg:
+email:{
+        type:String,
+        validate(value){
+            if(!validator.isEmail(value)){
+                throw new Error("Invalid Email")
+            }
+        }
+    },
+here if email is put wrong then gives error
+24)REST API
+"REpresentational State Transfer Application Programming Interface
+
+It is a software that allows two applications to communicate with each other over the internet and through various devices. Every time you access an app like Facebook or check the weather on your smartphone, an API is used.
+
+A RESTful API is an architectural style for an application program interface (API) that uses HTTP requests to access and use data. REST is not a programming language.
+
+25)npm init -y    adds pakage.json file to a folder
+similarly npm i express,  npm i mongoose, npm i validator,   here i means install
